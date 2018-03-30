@@ -1,0 +1,42 @@
+<div class="login-container" fxFill fxLayout="column" fxLayoutAlign="center center">
+<div fxFlex="10" fxLayout="row" fxLayoutAlign="center start">
+    <span style="font-family: 'Open Sans';font-size: 24px;color:white">Employee</span>
+    <span style="font-family: 'Open Sans';font-size: 24px;color:#f96302">Portal</span>
+</div>
+  <div fxFlex="40" [fxFlex.lt-sm]="'40'" [ngStyle.lt-sm]="{'padding':'5px'}" fxLayout="column" fxLayoutAlign="center center">
+      <div style="background:#09afbb;width:100%;padding:10px" fxLayoutAlign="center center">
+          Login
+        </div>
+    <div  fxLayout="column" class="example-container" >
+        
+        <form class="example-form" (ngSubmit)="onSubmit()" >
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Email" [formControl]="emailFormControl"
+                     [errorStateMatcher]="matcher" id="email"
+                     ngModel
+              name="email">
+             
+              <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Please enter a valid email address
+              </mat-error>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                Email is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="password" placeholder="Password" [formControl]="passwordFormControl"
+                [errorStateMatcher]="matcher" id="password" ngModel
+                name="password">
+                  <mat-error *ngIf="passwordFormControl.hasError('required')">
+                    Password is <strong>required</strong>
+                  </mat-error>
+              </mat-form-field>
+             
+                <button type="submit" mat-raised-button>Login</button>
+              
+          </form>
+          
+        
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<app-header (isSidenav)="snav.toggle()"></app-header>
+
+  <mat-sidenav-container class="example-container" >
+      <mat-sidenav #snav [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches" [style.marginTop.px]="mobileQuery.matches ? 64 : 0" >
+        <app-sidenav></app-sidenav>
+      </mat-sidenav>
+      <mat-sidenav-content>
+          <!-- <p *ngFor="let content of fillerContent">{{content}}</p> -->
+          <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>

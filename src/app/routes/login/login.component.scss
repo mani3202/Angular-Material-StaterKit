@@ -1,0 +1,32 @@
+app-login
+{
+	height: 100%;
+	width: 100%;
+	
+}
+
+.login-container
+{
+	background: url('./login.jpg') no-repeat center center fixed;background-size: cover;
+}
+
+.example-container {
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+	background: rgba(229, 248, 247, 0.884);
+  }
+  
+  .example-container > * {
+	width: 100%;
+  }
+
+  .example-form {
+	min-width: 150px;
+	max-width: 500px;
+	width: 100%;
+  }
+  
+  .example-full-width {
+	width: 100%;
+  }

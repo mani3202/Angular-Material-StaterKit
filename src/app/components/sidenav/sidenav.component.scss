@@ -1,0 +1,19 @@
+mat-sidenav {
+    width: 266px;
+    background: #2b3134
+  }
+
+  .mat-nav-list .mat-list-item{
+color: white
+}
+.mat-nav-list .mat-list-item:hover
+{
+background:#848484;
+color: white;
+border-left: 4px solid #f96302!important;
+}
+
+.active {
+  background-color: #121212!important;
+  border-left: 4px solid #f96302!important;
+}
